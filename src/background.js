@@ -35,11 +35,11 @@ async function createWindow() {
   let count = -1;
   
   const states = [
-      "Μην",
-      "Μην μου",
-      "Μην μου σπας",
-      "Μην μου σπας τα",
-      "Μην μου σπας τα αρχίδια!"
+      "state 1",
+      "state 2",
+      "state 3",
+      "state 4",
+      "state 5"
   ];
   
   const sleep = time => {
@@ -68,7 +68,7 @@ async function createWindow() {
   });
   
   activity
-  .login({ clientId: "830015445486403626" })
+  .login({ clientId: process.env.CLIENT_ID })
   .catch(console.error);
 
   return win;
