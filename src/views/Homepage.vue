@@ -75,7 +75,7 @@ export default {
   name: 'Homepage',
   data() {
     return {
-      config: require("../../conf/userconf.json") ? require("../../conf/userconf.json") : null
+      config: require("../../config/settings.json") ? require("../../config/settings.json") : null
     }
   },
 
@@ -84,7 +84,7 @@ export default {
       window.open(config.links[kathigitis]);
     },
     openConfigFolder() {
-      window.open(`file:///C:/Users/Antreas/Documents/Programming/webex-schedule/conf/`);
+      window.open(new URL('../../config/', window.location.href).href);
     },
     openEclass() {
       window.open("https://eclass.sch.gr");
